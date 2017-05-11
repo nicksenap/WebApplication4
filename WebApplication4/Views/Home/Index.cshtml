@@ -1,73 +1,68 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
 @section Scripts {
+
     <script>
 
         function createUsers() {
-            $.post('/Home/CreateUsers',
-                { Count: 100 },
-                function(data) {
-                    if (data.success) {
-                        console.log(data.value);
-                    } else {
-                        console.log(data.message);
-                    }
+            $.post('/Home/CreateUsers', { Count: 100 }, function (data) {
+                if (data.success) {
+                    console.log(data.value);
+                }
+                else {
+                    console.log(data.message);
+                }
 
-                }).fail(function() {
+            }).fail(function () {
                 console.log("Something went wrong");
             });
         }
 
-        $("#LoansButton").on("click",
-            function(e) {
+        $("#LoanButton").on("click", function (e) {
 
-                $.get('/Home/CreateLoans',
-                    function(d) {
-                        console.log(d.count);
-                    });
+            $.post('/Home/CreateLoans', function (d) {
+                console.log(d.count);
             });
+        });
 
 
     </script>
 }
 
-@{
-    ViewBag.Title = "Home Page";
-}
-
-<div class="jumbotron">
-    <h1>Lendify.io</h1>
-    <p class="lead">Lendify.io is a marketplace for P2P lending.</p>
-    <p><a class="btn btn-primary btn-lg"> Loan </a></p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg"> Investment </a></p>
+<div class="jumbotron" style="color:#fff; text-align:center; background: url(/Media/kace-rodriguez-85845-compressor.jpg) no-repeat; background-size: cover;">
+    @*<img src="~/Media/kace-rodriguez-85845-compressor.jpg" style="width:100%;" />*@
+    <h2>P2PSystem - The OG</h2>
+    <p class="lead">En marknadsplats för lån</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">The OG &raquo;</a></p>
+    
+   
+    <div class="btn btn-danger" onclick="createUsers();"> Create Users </div>
+    
 </div>
 
+
+
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+    <div class="col-xs-6">
+        <h2>Invest on the go</h2>
+        <p>Invest to make more from your moral while getting more from your money.</p>
+
+        <div class="btn btn-success" id="LoanButton" >Loan account &raquo;</div>
+        
+
+    </div>
+    <div class="col-xs-6">
+      
+        <h2>Loan on the go</h2>
+        <p>Always be careful with borrowing and remember:<span style="font-weight: 800;"><br/>A Lannister always pays his debts!</span>
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <div class="btn btn-warning" >Invest account &raquo;</div>
+        
     </div>
-    <div>
-        <button type="button" class="btn btn-sm btn-danger " onclick="createUsers()">Cheat the User</button>
-        <button type="button" class="btn btn-sm btn-danger " onclick="CreateLoans()">Cheat the Loans</button>
-        <button type="button" id ="LoanButton" class="btn btn-sm btn-danger " onclick="CheatLoanAccount">Cheat with Invest</button>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
+    @*<div class="col-md-4">
         <h2>Web Hosting</h2>
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    </div>*@
 </div>
-

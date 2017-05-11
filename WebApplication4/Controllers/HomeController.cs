@@ -29,6 +29,7 @@ namespace P2PSystem.Controllers
 
 
 
+
         [HttpPost]
         public JsonResult CreateUsers(int Count)
         {
@@ -47,7 +48,7 @@ namespace P2PSystem.Controllers
             return Json(new { success = true, value = test });
         }
 
-        [HttpGet]
+        [HttpPost]
         public JsonResult CreateLoans()
         {
             int CountLoans = 1000;
