@@ -15,21 +15,25 @@ namespace WebApplication4.Controllers
         // GET: Loan
         public ActionResult Index()
         {
+
             return View();
         }
 
-        //public async Task<ActionResult> ApplyForLoan(LoanViewModel model)
+        //public async Task<ActionResult> Apply(LoanViewModel model)
         //{
         //    if (ModelState.IsValid)
         //    {
-        //        var LoanApps = new LoanApplication { Amount = model.Amount, Months = model.Month };
-        //        var result = await 
+        //        var LoanApps = new LoanApplication {Amount = model.Amount, Months = model.Month};
+        //        //var result = await UserManager.CreateAsync(user, model.Password);
+        //        ////var result = await
+        //        //return View(model);
         //    }
-
-
         //}
-        // public
 
 
     }
 }
+// public
+
+
+    

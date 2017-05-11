@@ -236,6 +236,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\P2PSystemHelper.cs" />
     <Compile Include="Migrations\201705091459445_sec.cs" />
     <Compile Include="Migrations\201705091459445_sec.Designer.cs">
       <DependentUpon>201705091459445_sec.cs</DependentUpon>
@@ -374,6 +375,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Loan\Index.cshtml" />
+    <Content Include="Views\Home\CheatUsers.cshtml" />
+    <Content Include="Views\Home\Hello.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

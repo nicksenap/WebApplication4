@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApplication4.Controllers
+namespace P2PSystem.Controllers
 {
     public class HomeController : Controller
     {
@@ -26,5 +26,34 @@ namespace WebApplication4.Controllers
 
             return View();
         }
+
+
+
+        [HttpPost]
+        public JsonResult CreateUsers(int Count)
+        {
+            string test = "";
+
+            try
+            {
+                test = "Hello World " + Count.ToString();
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "Some exception" });
+
+            }
+
+            return Json(new { success = true, value = test });
+        }
+
+        [HttpGet]
+        public JsonResult CreateLoans()
+        {
+            int CountLoans = 1000;
+
+            return Json(new { count = CountLoans });
+        }
+
     }
 }

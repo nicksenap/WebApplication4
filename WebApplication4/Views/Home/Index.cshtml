@@ -2,6 +2,41 @@
     ViewBag.Title = "Home Page";
 }
 
+@section Scripts {
+    <script>
+
+        function createUsers() {
+            $.post('/Home/CreateUsers',
+                { Count: 100 },
+                function(data) {
+                    if (data.success) {
+                        console.log(data.value);
+                    } else {
+                        console.log(data.message);
+                    }
+
+                }).fail(function() {
+                console.log("Something went wrong");
+            });
+        }
+
+        $("#LoansButton").on("click",
+            function(e) {
+
+                $.get('/Home/CreateLoans',
+                    function(d) {
+                        console.log(d.count);
+                    });
+            });
+
+
+    </script>
+}
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
 <div class="jumbotron">
     <h1>Lendify.io</h1>
     <p class="lead">Lendify.io is a marketplace for P2P lending.</p>
@@ -19,6 +54,11 @@
         </p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
+    <div>
+        <button type="button" class="btn btn-sm btn-danger " onclick="createUsers()">Cheat the User</button>
+        <button type="button" class="btn btn-sm btn-danger " onclick="CreateLoans()">Cheat the Loans</button>
+        <button type="button" id ="LoanButton" class="btn btn-sm btn-danger " onclick="CheatLoanAccount">Cheat with Invest</button>
+    </div>
     <div class="col-md-4">
         <h2>Get more libraries</h2>
         <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
@@ -30,3 +70,4 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
