@@ -217,14 +217,18 @@
     <Compile Include="Controllers\LoanController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DAL\Enum.cs" />
-    <Compile Include="DAL\InvestAccount.cs" />
-    <Compile Include="DAL\InvestApplication.cs" />
+    <Compile Include="DAL\InvestmentAccount.cs" />
+    <Compile Include="DAL\InvestmentAccountPayment.cs" />
+    <Compile Include="DAL\InvestmentApplication.cs" />
+    <Compile Include="DAL\Investment.cs" />
+    <Compile Include="DAL\InvestmentAsset.cs" />
+    <Compile Include="DAL\InvestmentPayment.cs" />
     <Compile Include="DAL\Loan.cs" />
     <Compile Include="DAL\LoanAccount.cs" />
     <Compile Include="DAL\LoanApplication.cs" />
     <Compile Include="DAL\LoanPayment.cs" />
     <Compile Include="DAL\LoanPaymentPart.cs" />
-    <Compile Include="DAL\LoanRate.cs" />
+    <Compile Include="DAL\Rate.cs" />
     <Compile Include="DAL\P2PUser.cs" />
     <Compile Include="DAL\UserChangeLog.cs" />
     <Compile Include="DAL\UserInfoData.cs" />
@@ -243,6 +247,14 @@
     <Compile Include="Migrations\201705101445223_force.cs" />
     <Compile Include="Migrations\201705101445223_force.Designer.cs">
       <DependentUpon>201705101445223_force.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705101511204_sexy.cs" />
+    <Compile Include="Migrations\201705101511204_sexy.Designer.cs">
+      <DependentUpon>201705101511204_sexy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705101730082_Taichi.cs" />
+    <Compile Include="Migrations\201705101730082_Taichi.Designer.cs">
+      <DependentUpon>201705101730082_Taichi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -339,6 +351,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705101445223_force.resx">
       <DependentUpon>201705101445223_force.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705101511204_sexy.resx">
+      <DependentUpon>201705101511204_sexy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705101730082_Taichi.resx">
+      <DependentUpon>201705101730082_Taichi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

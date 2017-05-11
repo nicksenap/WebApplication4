@@ -125,4 +125,57 @@ namespace WebApplication4.DAL
         Paid = 2,
         Unpaid = 3,
     }
+
+    public enum InvestAccountStatus
+    {
+        Interest = 0,
+        Principal = 1,
+        Fees = 2 
+    }
+
+    public enum InvestAccountType
+    {
+        Interest = 0,
+        Principal = 1,
+        Fees = 2
+    }
+
+    public enum InvestAccountDirection
+    {
+        Interest = 0,
+        Principal = 1,
+        Fees = 2
+    }
+
+    public enum InvestmentAssetStatus
+    {
+
+    }
+
+    public enum InvestmentAssetType
+    {
+
+    }
+
+
+    public enum InvestmentType
+    {
+    }
+
+    public enum InvestmentStatus
+    {
+    }
+
+
+    public enum InvestmentPaymentType
+    {
+
+    }
+
+
+
+    public enum InvestmentPaymentStatus
+    {
+
+    }
 }

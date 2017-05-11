@@ -114,3 +114,5 @@ C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebAppli
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\bin\Microsoft.Scripting.AspNet.xml
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\bin\Microsoft.Scripting.Metadata.xml
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.force.resources
+C:\Users\NickSong\Documents\Visual Studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.sexy.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.Taichi.resources

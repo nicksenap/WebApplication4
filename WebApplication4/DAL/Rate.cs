@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication4.DAL
 {
-    public class LoanRate
+    public class Rate
     {
         [Key]
         public int Id { set; get; }

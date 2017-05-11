@@ -38,8 +38,8 @@ namespace WebApplication4.DAL
         public LoanAccount LoanAccount { set; get; }
 
         public virtual ICollection<LoanPayment> LoanPayments { set; get; }
-        public virtual LoanRate RateAPR { set; get; }
-        public virtual LoanRate RateEIR { set; get; }
+        public virtual Rate RateAPR { set; get; }
+        public virtual Rate RateEIR { set; get; }
 
         public double APR { set; get; }    
 

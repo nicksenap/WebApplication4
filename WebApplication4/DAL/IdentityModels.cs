@@ -11,12 +11,18 @@ namespace WebApplication4.DAL
         }
 
         public DbSet<LoanApplication> LoanApplications { get; set; }
-        public DbSet<InvestApplication> InvestApplications { get; set; }
+        public DbSet<InvestmentApplication> InvestApplications { get; set; }
         public DbSet<LoanAccount> LoanAccounts { get; set; }
-        public DbSet<InvestAccount> InvestAccounts { get; set; }
-        public DbSet<UserInfoData> UserInfoDatas { get; set; }
+        public DbSet<InvestmentAccount> InvestAccounts { get; set; }
+
+        public DbSet<LoanPaymentPart> LoanPaymentParts { set; get; } 
+
+        public DbSet<UserInfoData> UserInfoData { get; set; }
         public DbSet<UserInfoType> UserInfoTypes { get; set; }
         public DbSet<UserChangeLog> UserChangeLogs { get; set; }
+
+        public DbSet<Rate> Rates { set; get; }
+
 
 
         public static P2PDbContext Create()
