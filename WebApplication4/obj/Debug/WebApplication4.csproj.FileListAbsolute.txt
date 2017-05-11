@@ -116,3 +116,16 @@ C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebAppli
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.force.resources
 C:\Users\NickSong\Documents\Visual Studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.sexy.resources
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.Taichi.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zig.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zag.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zug.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zkg.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zyg.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zXG.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zXX.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zXy.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zXz.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxx.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxx.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxxx.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxxxx.resources

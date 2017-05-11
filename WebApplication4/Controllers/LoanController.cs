@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using WebApplication4.Models;
 using WebApplication4.DAL;
 
@@ -22,7 +23,7 @@ namespace WebApplication4.Controllers
         //    if (ModelState.IsValid)
         //    {
         //        var LoanApps = new LoanApplication { Amount = model.Amount, Months = model.Month };
-        //        var result = await
+        //        var result = await 
         //    }
 
 

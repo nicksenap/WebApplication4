@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplication4.DAL
 {
@@ -7,6 +8,7 @@ namespace WebApplication4.DAL
     {
         [Key]
         public int Id { get; set; }
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime CreationDate { get; set; }
 
         public double Amount { set; get; }

@@ -4,6 +4,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplication4.DAL
 {
@@ -19,21 +21,24 @@ namespace WebApplication4.DAL
         }
 
         public string PersoNunmber { set; get; }
+
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime CreationDate { set; get; }
+        
         // public virtual ICollection<UserInfoData> UserInfoData ;
         public string FirstName { set; get; }
         public string LastName { set; get; }
         public UserStatus Status { set; get; }
 
         public virtual ICollection<UserChangeLog> UserChangeLogs { set; get; }
-        public virtual ICollection<UserInfoData> UserInfoDatas { set; get; }
+        public virtual ICollection<UserInfoData> UserInfoData { set; get; }
         public virtual ICollection<LoanApplication> LoanApplications { set; get; }
         public virtual ICollection<LoanAccount> LoanAccounts { set; get; }
 
 
         public P2PUser()
         {
-            this.CreationDate = DateTime.Today;
+            // this.CreationDate = DateTime.Today;
             
         }
     }

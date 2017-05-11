@@ -256,6 +256,58 @@
     <Compile Include="Migrations\201705101730082_Taichi.Designer.cs">
       <DependentUpon>201705101730082_Taichi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705110907293_zig.cs" />
+    <Compile Include="Migrations\201705110907293_zig.Designer.cs">
+      <DependentUpon>201705110907293_zig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705110931255_zag.cs" />
+    <Compile Include="Migrations\201705110931255_zag.Designer.cs">
+      <DependentUpon>201705110931255_zag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705110933540_zug.cs" />
+    <Compile Include="Migrations\201705110933540_zug.Designer.cs">
+      <DependentUpon>201705110933540_zug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705110944462_zkg.cs" />
+    <Compile Include="Migrations\201705110944462_zkg.Designer.cs">
+      <DependentUpon>201705110944462_zkg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705110958583_zyg.cs" />
+    <Compile Include="Migrations\201705110958583_zyg.Designer.cs">
+      <DependentUpon>201705110958583_zyg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111011217_zXG.cs" />
+    <Compile Include="Migrations\201705111011217_zXG.Designer.cs">
+      <DependentUpon>201705111011217_zXG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111125342_zXX.cs" />
+    <Compile Include="Migrations\201705111125342_zXX.Designer.cs">
+      <DependentUpon>201705111125342_zXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111134040_zXy.cs" />
+    <Compile Include="Migrations\201705111134040_zXy.Designer.cs">
+      <DependentUpon>201705111134040_zXy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111135008_zXz.cs" />
+    <Compile Include="Migrations\201705111135008_zXz.Designer.cs">
+      <DependentUpon>201705111135008_zXz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111138254_zxxx.cs" />
+    <Compile Include="Migrations\201705111138254_zxxx.Designer.cs">
+      <DependentUpon>201705111138254_zxxx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111159337_zxxxx.cs" />
+    <Compile Include="Migrations\201705111159337_zxxxx.Designer.cs">
+      <DependentUpon>201705111159337_zxxxx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111212347_zxxxxx.cs" />
+    <Compile Include="Migrations\201705111212347_zxxxxx.Designer.cs">
+      <DependentUpon>201705111212347_zxxxxx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111253429_zxxxxxx.cs" />
+    <Compile Include="Migrations\201705111253429_zxxxxxx.Designer.cs">
+      <DependentUpon>201705111253429_zxxxxxx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="DAL\IdentityModels.cs" />
@@ -357,6 +409,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705101730082_Taichi.resx">
       <DependentUpon>201705101730082_Taichi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705110907293_zig.resx">
+      <DependentUpon>201705110907293_zig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705110931255_zag.resx">
+      <DependentUpon>201705110931255_zag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705110933540_zug.resx">
+      <DependentUpon>201705110933540_zug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705110944462_zkg.resx">
+      <DependentUpon>201705110944462_zkg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705110958583_zyg.resx">
+      <DependentUpon>201705110958583_zyg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111011217_zXG.resx">
+      <DependentUpon>201705111011217_zXG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111125342_zXX.resx">
+      <DependentUpon>201705111125342_zXX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111134040_zXy.resx">
+      <DependentUpon>201705111134040_zXy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111135008_zXz.resx">
+      <DependentUpon>201705111135008_zXz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111138254_zxxx.resx">
+      <DependentUpon>201705111138254_zxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111159337_zxxxx.resx">
+      <DependentUpon>201705111159337_zxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111212347_zxxxxx.resx">
+      <DependentUpon>201705111212347_zxxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111253429_zxxxxxx.resx">
+      <DependentUpon>201705111253429_zxxxxxx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
