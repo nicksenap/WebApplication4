@@ -129,3 +129,4 @@ C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebAppli
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxx.resources
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxxx.resources
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxxxx.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxxxxx.resources

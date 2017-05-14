@@ -8,6 +8,8 @@ namespace WebApplication4.DAL
     {
         public P2PDbContext(): base("P2PConnection", throwIfV1Schema: false)
         {
+            // Disable lazy loading before serialization
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<LoanApplication> LoanApplications { get; set; }

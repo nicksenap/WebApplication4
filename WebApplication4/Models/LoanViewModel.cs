@@ -15,6 +15,7 @@ namespace WebApplication4.Models
 
         [Required]
         [StringLength(12)]
-        public int Month { set; get; }
+        public int Months { set; get; }
+
     }
 }

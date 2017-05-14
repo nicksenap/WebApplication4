@@ -117,6 +117,10 @@ namespace WebApplication4.DAL
         Fees = 2
     }
 
+    public enum LoanApplicationStatus
+    {
+        Pending = 0
+    }
 
     public enum LoanPaymentPartStatus
     {

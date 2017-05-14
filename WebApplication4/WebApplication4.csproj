@@ -309,6 +309,10 @@
     <Compile Include="Migrations\201705111253429_zxxxxxx.Designer.cs">
       <DependentUpon>201705111253429_zxxxxxx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705141308490_zxxxxxxx.cs" />
+    <Compile Include="Migrations\201705141308490_zxxxxxxx.Designer.cs">
+      <DependentUpon>201705141308490_zxxxxxxx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="DAL\IdentityModels.cs" />
@@ -320,6 +324,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\materialize.css" />
+    <Content Include="Content\materialize.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -375,9 +381,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Loan\Index.cshtml" />
+    <Content Include="Views\Loan\Apply.cshtml" />
     <Content Include="Views\Home\CheatUsers.cshtml" />
     <Content Include="Views\Home\Hello.cshtml" />
+    <Content Include="Views\Loan\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -452,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705111253429_zxxxxxx.resx">
       <DependentUpon>201705111253429_zxxxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705141308490_zxxxxxxx.resx">
+      <DependentUpon>201705141308490_zxxxxxxx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,6 +20,7 @@ namespace WebApplication4.DAL
 
         public bool isSigned { set; get; }
         public bool isVerified { set; get; }
+        public LoanApplicationStatus Status { set; get; }
 
         public double UCScore { set; get; }
         public string UCData { get; set; }
@@ -37,10 +38,10 @@ namespace WebApplication4.DAL
 
         public LoanApplication()
         {
-            this.CreationDate = DateTime.Today;
+            // this.CreationDate = DateTime.Today;
             //this.StatusLogs = new List<LoanApplicationChangeLog>();
         }
     }
 
-   
+    
 }
