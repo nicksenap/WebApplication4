@@ -22,6 +22,7 @@ namespace WebApplication4.DAL
         public bool isVerified { set; get; }
         public LoanApplicationStatus Status { set; get; }
 
+        public  P2PUser User { set; get; }
         public double UCScore { set; get; }
         public string UCData { get; set; }
         public int UCViews { set; get; }

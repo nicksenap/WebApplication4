@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using Microsoft.AspNet.Identity;
 using WebApplication4.Models;
 using WebApplication4.DAL;
 using Microsoft.AspNet.Identity;
+using P2PSystem.Controllers;
 
 namespace WebApplication4.Controllers
 {
@@ -19,17 +21,30 @@ namespace WebApplication4.Controllers
         //Get: Loan
         public ActionResult Index()
         {
-            var user = User.Identity.GetUserId();
-            var los = db.LoanApplications.OrderBy(q => q.Id).ToList();
+            bool isLoggedin = (System.Web.HttpContext.Current.User != null) &&
+                              System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+            if (isLoggedin)
+            {
+                var user = User.Identity.GetUserId();
+                var los = db.LoanApplications.OrderBy(q => q.Id).ToList();
+                string currentUserId = User.Identity.GetUserId();
+                P2PUser currentUser = db.Users.FirstOrDefault(x => x.Id == currentUserId);
 
-            //IQueryable loansQueryable = db.LoanApplications.Where(l => l == user);
+                IQueryable<LoanApplication> loanApps = db.LoanApplications.Where(l => l.User.Id == currentUserId);
+                //var sql = loanApps.ToString();
+
+                // ViewBag.message = user;
+                //Console.WriteLine(user);
+                // db.LoanApplications.SqlQuery("SELECT * FROM LoanApplication");
+
+                return View(loanApps.ToList());
+            }
+            else
+            {
+                var res = RedirectToAction("Register", "Account");
+                return res;
+            }
             
-            
-            // ViewBag.message = user;
-            //Console.WriteLine(user);
-            // db.LoanApplications.SqlQuery("SELECT * FROM LoanApplication");
-            
-            return View(los);
         }
 
         //
@@ -49,7 +64,10 @@ namespace WebApplication4.Controllers
             try
             {
                 if (ModelState.IsValid)
-                {   
+                {
+                    string currentUserId = User.Identity.GetUserId();
+                    P2PUser currentUser = db.Users.FirstOrDefault(x => x.Id == currentUserId);
+                    loanApplication.User = currentUser;
                     db.LoanApplications.Add(loanApplication);
                     
                     db.SaveChanges();

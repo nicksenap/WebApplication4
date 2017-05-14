@@ -119,7 +119,9 @@ namespace WebApplication4.DAL
 
     public enum LoanApplicationStatus
     {
-        Pending = 0
+        Pending = 0,
+        Approved = 1,
+        Reject = 2,
     }
 
     public enum LoanPaymentPartStatus

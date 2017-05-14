@@ -313,6 +313,10 @@
     <Compile Include="Migrations\201705141308490_zxxxxxxx.Designer.cs">
       <DependentUpon>201705141308490_zxxxxxxx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705141542184_zxxxxxxxx.cs" />
+    <Compile Include="Migrations\201705141542184_zxxxxxxxx.Designer.cs">
+      <DependentUpon>201705141542184_zxxxxxxxx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="DAL\IdentityModels.cs" />
@@ -324,7 +328,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -462,6 +465,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705141308490_zxxxxxxx.resx">
       <DependentUpon>201705141308490_zxxxxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705141542184_zxxxxxxxx.resx">
+      <DependentUpon>201705141542184_zxxxxxxxx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
