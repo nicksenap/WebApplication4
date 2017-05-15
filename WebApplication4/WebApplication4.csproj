@@ -213,7 +213,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvestmentController.cs" />
     <Compile Include="Controllers\LoanController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DAL\Enum.cs" />
@@ -317,9 +319,34 @@
     <Compile Include="Migrations\201705141542184_zxxxxxxxx.Designer.cs">
       <DependentUpon>201705141542184_zxxxxxxxx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705150844387_mon.cs" />
+    <Compile Include="Migrations\201705150844387_mon.Designer.cs">
+      <DependentUpon>201705150844387_mon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705150917047_mony.cs" />
+    <Compile Include="Migrations\201705150917047_mony.Designer.cs">
+      <DependentUpon>201705150917047_mony.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705151147224_monyy.cs" />
+    <Compile Include="Migrations\201705151147224_monyy.Designer.cs">
+      <DependentUpon>201705151147224_monyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705151158522_monyyy.cs" />
+    <Compile Include="Migrations\201705151158522_monyyy.Designer.cs">
+      <DependentUpon>201705151158522_monyyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705151620537_monyyyy.cs" />
+    <Compile Include="Migrations\201705151620537_monyyyy.Designer.cs">
+      <DependentUpon>201705151620537_monyyyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705151631062_monyyyyY.cs" />
+    <Compile Include="Migrations\201705151631062_monyyyyY.Designer.cs">
+      <DependentUpon>201705151631062_monyyyyY.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="DAL\IdentityModels.cs" />
+    <Compile Include="Models\InvestmentViewModel.cs" />
     <Compile Include="Models\LoanViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -339,6 +366,16 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\Roboto-Bold.woff" />
+    <Content Include="fonts\Roboto-Bold.woff2" />
+    <Content Include="fonts\Roboto-Light.woff" />
+    <Content Include="fonts\Roboto-Light.woff2" />
+    <Content Include="fonts\Roboto-Medium.woff" />
+    <Content Include="fonts\Roboto-Medium.woff2" />
+    <Content Include="fonts\Roboto-Regular.woff" />
+    <Content Include="fonts\Roboto-Regular.woff2" />
+    <Content Include="fonts\Roboto-Thin.woff" />
+    <Content Include="fonts\Roboto-Thin.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -388,10 +425,13 @@
     <Content Include="Views\Home\CheatUsers.cshtml" />
     <Content Include="Views\Home\Hello.cshtml" />
     <Content Include="Views\Loan\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Investment\Index.cshtml" />
+    <Content Include="Views\Investment\Apply.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Investment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -468,6 +508,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705141542184_zxxxxxxxx.resx">
       <DependentUpon>201705141542184_zxxxxxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150844387_mon.resx">
+      <DependentUpon>201705150844387_mon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150917047_mony.resx">
+      <DependentUpon>201705150917047_mony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705151147224_monyy.resx">
+      <DependentUpon>201705151147224_monyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705151158522_monyyy.resx">
+      <DependentUpon>201705151158522_monyyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705151620537_monyyyy.resx">
+      <DependentUpon>201705151620537_monyyyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705151631062_monyyyyY.resx">
+      <DependentUpon>201705151631062_monyyyyY.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

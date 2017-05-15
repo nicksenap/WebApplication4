@@ -29,6 +29,8 @@ namespace WebApplication4.DAL
         public string FirstName { set; get; }
         public string LastName { set; get; }
         public UserStatus Status { set; get; }
+        public UserType Type { set; get; }
+
 
         public virtual ICollection<UserChangeLog> UserChangeLogs { set; get; }
         public virtual ICollection<UserInfoData> UserInfoData { set; get; }

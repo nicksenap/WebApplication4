@@ -131,3 +131,9 @@ C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebAppli
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxxxx.resources
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxxxxx.resources
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.zxxxxxxxx.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.mon.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.mony.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.monyy.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.monyyy.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.monyyyy.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.monyyyyY.resources

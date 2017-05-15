@@ -1,0 +1,32 @@
+﻿
+@using System.Data.Entity
+@model  WebApplication4.Models.InvestmentViewModel
+
+
+
+<h2>Apply for a new Investment</h2>
+<hr />
+<form method="post">
+    <div class="form-group">
+        @Html.LabelFor(m => m.Amount, new { @class = "col-md-2 control-label" })
+        
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Amount, new { @class = "form-control" })
+        </div>
+
+        <br /> <br />
+        @Html.LabelFor(m => m.Months, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Months, new { @class = "form-control" })
+        </div>
+
+        <br /><br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-success" value="Submit" />
+            </div>
+        </div>
+
+    </div>
+
+</form>

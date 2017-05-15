@@ -6,12 +6,12 @@
     <script>
 
         function createUsers() {
-            $.post('/Home/CreateUsers', { Count: 100 }, function (data) {
+            $.post('/Home/CreateUsers',  function (data) {
                 if (data.success) {
-                    console.log(data.value);
+                    console.log("Haha");
                 }
                 else {
-                    console.log(data.message);
+                    console.log("No");
                 }
 
             }).fail(function () {
@@ -19,12 +19,40 @@
             });
         }
 
-        $("#LoanButton").on("click", function (e) {
 
-            $.post('/Home/CreateLoans', function (d) {
-                console.log(d.count);
+        function createLoans() {
+            $.post('/Home/CreateLoans',  function (data) {
+                if (data.success) {
+                    console.log("Hahahi");
+                }
+                else {
+                    console.log("NoNo");
+                }
+
+            }).fail(function () {
+                console.log("Something went wrong");
             });
-        });
+        }
+
+        function createInvest() {
+            $.post('/Home/CreateInvestment',  function (data) {
+                if (data.success) {
+                    console.log("Hahahi");
+                }
+                else {
+                    console.log("NoNo");
+                }
+
+            }).fail(function () {
+                console.log("Something went wrong");
+            });
+        }
+
+        //$("#LoanButton").on("click", function (e) {
+        //    $.post('/Home/CreateLoans', function (d) {
+        //        console.log("gud");
+        //    });
+        //});
 
 
     </script>
@@ -35,10 +63,12 @@
     <div class="container">
         <h2>P2PSystem - The OG</h2>
         <p class="lead">En marknadsplats för lån</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-lg">The OG &raquo;</a></p>
+        <p><a href="https://9gag.com" class="btn btn-primary btn-lg">The OG &raquo;</a></p>
 
 
         <div class="btn btn-danger" onclick="createUsers();"> Create Users </div>
+        <div class="btn btn-danger" onclick="createLoans();"> Create Loans </div>
+        <div class="btn btn-danger" onclick="createInvest();"> Create Investments </div>
     </div>
 </div>
 
@@ -50,8 +80,13 @@
         <p>Invest to make more from your moral while getting more from your money.</p>
 
        @*<div class="btn btn-success" id="LoanButton" >Loan account &raquo;</div>*@
-        <a type="button" class="btn btn-lg btn-primary "> Investmentor </a>
-                
+        
+        @*<a type="button" class="btn btn-lg btn-primary " id="login_inv" href="/Investment/index" runat="server"> Investment </a>*@
+      
+                <a type="button" class="btn btn-lg btn-primary " id="login_inv" href="/Investment/index" runat="server"> Investment </a>
+            
+            
+        
 
     </div>
     <div class="col-xs-6">
@@ -60,7 +95,10 @@
         <p>Always be careful with borrowing and remember:<span style="font-weight: 800;"><br/>A Lannister always pays his debts!</span>
         </p>
         @*<div class="btn btn-warning" >Invest account &raquo;</div>*@
-        <a type="button" class="btn btn-lg btn-primary " href="/Loan/Index"> Loaner </a>
+       
+                <a type="button" class="btn btn-lg btn-primary " id="login_loan" href="/Loan/Index" runat="server"> Loan </a>
+            
+        
     </div>
     @*<div class="col-md-4">
         <h2>Web Hosting</h2>

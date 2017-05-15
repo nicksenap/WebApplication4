@@ -1,12 +1,11 @@
-﻿@using System.Data.Entity
-@using WebApplication4.DAL
-@model IEnumerable<WebApplication4.DAL.LoanApplication>
+﻿@using WebApplication4.DAL
+@model IEnumerable<InvestmentApplication>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Apply for a new Investment";
 }
 
-<h2>My Loans</h2>
+<h2>Index</h2>
 
 <table class="table table-striped">
     <tr>
@@ -25,11 +24,12 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model) {
-        if (item.Status == LoanApplicationStatus.Approved)
+    @foreach (var item in Model)
+    {
+        if (item.Status ==InvestmentApplicationStatus.Approved)
         {
             <tr class="success">
-            
+
                 <td>
                     @Html.DisplayFor(modelItem => item.CreationDate)
                 </td>
@@ -45,7 +45,7 @@
 
             </tr>
         }
-        else if (item.Status == LoanApplicationStatus.Reject)
+        else if (item.Status == InvestmentApplicationStatus.Reject)
         {
 
 
@@ -90,5 +90,7 @@
 </table>
 
 <h2>@ViewBag.message</h2>
-<a href="/Loan/Apply" class="btn btn-info"> Start a new Apply </a>
+<a href="/Investment/Apply" class="btn btn-info"> Start a new Investment </a>
+
+
 

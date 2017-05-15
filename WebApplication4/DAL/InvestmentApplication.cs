@@ -16,6 +16,10 @@ namespace WebApplication4.DAL
         public int Amount { get; set; }
         public int Months { get; set; }
 
+
+        public InvestmentApplicationStatus Status { set; get; }
+        public P2PUser User { set; get; }
+
         public virtual ICollection<Investment> Investments { set; get; }
         public virtual ICollection<InvestmentAccountPayment> InvestAccountPayments { set; get; }
 
@@ -26,4 +30,6 @@ namespace WebApplication4.DAL
 
       
     }
+
+   
 }

@@ -20,8 +20,9 @@ namespace WebApplication4.DAL
 
     public enum UserType
     {
-        investor,
-        loaner
+        Investor = 0,
+        Ioaner = 1,
+        Admin = 100
 
     }
 
@@ -130,6 +131,13 @@ namespace WebApplication4.DAL
         Upcoming = 1,
         Paid = 2,
         Unpaid = 3,
+    }
+
+    public enum InvestmentApplicationStatus
+    {
+        Pending = 0,
+        Approved = 1,
+        Reject = 2,
     }
 
     public enum InvestAccountStatus

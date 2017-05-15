@@ -1,47 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
+﻿using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
-using WebApplication4.Models;
 using WebApplication4.DAL;
-using Microsoft.AspNet.Identity;
-using P2PSystem.Controllers;
 
 namespace WebApplication4.Controllers
 {
     public class LoanController : Controller
     {
-        private P2PDbContext db = new P2PDbContext();
+        private readonly P2PDbContext _db = new P2PDbContext();
 
         //Get: Loan
         public ActionResult Index()
-        {
-            bool isLoggedin = (System.Web.HttpContext.Current.User != null) &&
+        {   
+            // Check if user is logged in;
+            bool isLoggedIn = (System.Web.HttpContext.Current.User != null) &&
                               System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
-            if (isLoggedin)
+            if (isLoggedIn)
             {
                 var user = User.Identity.GetUserId();
-                var los = db.LoanApplications.OrderBy(q => q.Id).ToList();
+
+                var los = _db.LoanApplications.OrderBy(q => q.Id).ToList();
+
                 string currentUserId = User.Identity.GetUserId();
-                P2PUser currentUser = db.Users.FirstOrDefault(x => x.Id == currentUserId);
 
-                IQueryable<LoanApplication> loanApps = db.LoanApplications.Where(l => l.User.Id == currentUserId);
-                //var sql = loanApps.ToString();
+                P2PUser currentUser = _db.Users.FirstOrDefault(x => x.Id == currentUserId);
 
-                // ViewBag.message = user;
-                //Console.WriteLine(user);
-                // db.LoanApplications.SqlQuery("SELECT * FROM LoanApplication");
-
+                IQueryable<LoanApplication> loanApps = _db.LoanApplications.Where(l => l.User.Id == currentUserId);
+               
                 return View(loanApps.ToList());
             }
             else
             {
                 var res = RedirectToAction("Login", "Account");
+
                 return res;
             }
             
@@ -66,17 +58,27 @@ namespace WebApplication4.Controllers
                 if (ModelState.IsValid)
                 {
                     string currentUserId = User.Identity.GetUserId();
-                    P2PUser currentUser = db.Users.FirstOrDefault(x => x.Id == currentUserId);
+
+                    P2PUser currentUser = _db.Users.FirstOrDefault(x => x.Id == currentUserId);
+
                     loanApplication.User = currentUser;
-                    db.LoanApplications.Add(loanApplication);
+
+                    _db.Users.FirstOrDefault(x => x.Id == currentUserId).Type = UserType.Ioaner;
+
+                    _db.Users.FirstOrDefault(x => x.Id == currentUserId).Status = UserStatus.Active;
+
+                    _db.LoanApplications.Add(loanApplication);
                     
-                    db.SaveChanges();
+                    _db.SaveChanges();
+
                     return RedirectToAction("Index");
                 }
             }
             catch (RetryLimitExceededException)
             {
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                ModelState.AddModelError("", "Unable to save changes. " +
+                                             "Try again, and if the problem " +
+                                             "persists see your system administrator.");
             }
             return View();
 

@@ -139,7 +139,10 @@ namespace WebApplication4.Controllers
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
-        {
+        {   
+            P2PDbContext context = new P2PDbContext();
+            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Manager"))
+                .ToList(), "Name", "Name");
             return View();
         }
 
@@ -150,13 +153,17 @@ namespace WebApplication4.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+            P2PDbContext context = new P2PDbContext();
             if (ModelState.IsValid)
             {
                 var user = new P2PUser { UserName = model.Email, Email = model.Email, PersoNunmber = model.PersonNumber};
+                
                 var result = await UserManager.CreateAsync(user, model.Password);
+
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    UserManager.AddToRole(user.Id, model.UserRoles);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -166,9 +173,11 @@ namespace WebApplication4.Controllers
 
                     return RedirectToAction("Index", "Home");
                 }
+                ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Manager"))
+                    .ToList(), "Name", "Name");
                 AddErrors(result);
             }
-
+                
             // If we got this far, something failed, redisplay form
             return View(model);
         }

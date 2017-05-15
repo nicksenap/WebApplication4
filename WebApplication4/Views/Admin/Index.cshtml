@@ -1,15 +1,18 @@
-﻿@using System.Data.Entity
+﻿
 @using WebApplication4.DAL
-@model IEnumerable<WebApplication4.DAL.LoanApplication>
-
+@model IEnumerable<LoanApplication>
+    
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "The OG Admin";
 }
 
-<h2>My Loans</h2>
+<h2>THE OG Judgement</h2>
 
 <table class="table table-striped">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User)            
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.CreationDate)
         </th>
@@ -25,11 +28,16 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
         if (item.Status == LoanApplicationStatus.Approved)
         {
             <tr class="success">
-            
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Id)
+                </td>
+
                 <td>
                     @Html.DisplayFor(modelItem => item.CreationDate)
                 </td>
@@ -42,7 +50,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
-
+              
             </tr>
         }
         else if (item.Status == LoanApplicationStatus.Reject)
@@ -50,6 +58,11 @@
 
 
             <tr class="danger">
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Id)
+                </td>
+
 
                 <td>
                     @Html.DisplayFor(modelItem => item.CreationDate)
@@ -69,7 +82,10 @@
         else
         {
             <tr>
-
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Id)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CreationDate)
                 </td>
@@ -89,6 +105,6 @@
 
 </table>
 
-<h2>@ViewBag.message</h2>
-<a href="/Loan/Apply" class="btn btn-info"> Start a new Apply </a>
+
+
 
