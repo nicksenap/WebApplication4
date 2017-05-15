@@ -41,7 +41,7 @@ namespace WebApplication4.Controllers
             }
             else
             {
-                var res = RedirectToAction("Register", "Account");
+                var res = RedirectToAction("Login", "Account");
                 return res;
             }
             
