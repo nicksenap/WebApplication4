@@ -18,10 +18,21 @@ namespace P2PSystem.Controllers
 {
     public class HomeController : Controller
     {
+        private bool rich;
+
         private ApplicationUserManager _userManager;
 
+        private Random rnd = new Random();
+
+        private List<string> list = new List<string>();
+
+        private List<string> loaner = new List<string>();
+
+        private List<string> Investor = new List<string>();
 
         private readonly P2PDbContext _db = new P2PDbContext();
+
+       
 
         public ApplicationUserManager UserManager
         {
@@ -87,12 +98,14 @@ namespace P2PSystem.Controllers
         public List<string> LISTOFID()
         {
             var listofid = new List<string>();
-
+            int count = 0;
             foreach (var usr in _db.Users)
             {
                 listofid.Add(usr.Id);
+                count += 1;
             }
             ;
+
             return listofid;
 
         }
@@ -114,18 +127,25 @@ namespace P2PSystem.Controllers
                 res = result.Result;
 
                 var email = JObject.Parse(res)["results"][0]["email"];
+                var phone = JObject.Parse(res)["results"][0]["phone"];
                 var first = JObject.Parse(res)["results"][0]["name"]["first"];
                 var last = JObject.Parse(res)["results"][0]["name"]["last"];
 
                 P2PUser user = new P2PUser {UserName = email.ToString(),
 
                     Email = email.ToString(),
-                    PersoNunmber = "9011223344",
+                    PersoNunmber = (2017 - rnd.Next(15,80)).ToString() + rnd.Next(10, 12).ToString() + rnd.Next(10, 30) + "-" +
+                                   rnd.Next(1000, 9999),
                     FirstName = first.ToString(),
-                    LastName = last.ToString()
-                    };
+                    LastName = last.ToString(),
+                    Type = (UserType) (DateTime.Now.Second % 2),
+                    PhoneNumber = phone.ToString(),
+                };
+               
                 var password = "?9Rec+o9Z7tF";
+                //var ls = LISTOFID();
                 var resultti = await UserManager.CreateAsync(user, password);
+
                 response.Dispose();
                 
                 }
@@ -136,14 +156,18 @@ namespace P2PSystem.Controllers
         [HttpPost]
         public ActionResult CreateLoans()
         {
-            var user = _db.Users.FirstOrDefault(x => x.Email == "nsong81@gmail.com");
-
-            _db.LoanApplications.Add(new LoanApplication
+            var Loaners = _db.Users.Where(x => x.Type == UserType.Ioaner);
+            foreach (var loaner in Loaners)
             {
-                Months = new Random().Next(12,24),
-                Amount = new Random().Next(10000,80000),
+                _db.LoanApplications.Add(new LoanApplication
+                {
+                    Months = rnd.Next(12, 24),
+                    User = loaner,
+                    Amount = rnd.Next(10000, 80000),
+                    
 
-            });
+                });
+            }
 
             _db.SaveChanges();
 
@@ -153,12 +177,20 @@ namespace P2PSystem.Controllers
         [HttpPost]
         public ActionResult CreateInvestment()
         {
-            _db.InvestApplications.Add(new InvestmentApplication
+            var Investors = _db.Users.Where(x => x.Type == UserType.Investor);
+            Random rnd = new Random();
+            foreach (var investor in Investors)
             {
-                Amount = new Random().Next(10000, 1000000),
-                Months = new Random().Next(12, 64),
+                _db.InvestApplications.Add(new InvestmentApplication
+                {
+                    Amount = rnd.Next(10000, 1000000),
+                    User = investor,
+                    Months = rnd.Next(12, 64),
+                  
 
-            });
+                });
+            }
+            
 
             _db.SaveChanges();
 
