@@ -97,16 +97,14 @@ namespace P2PSystem.Controllers
 
         public List<string> LISTOFID()
         {
-            var listofid = new List<string>();
-            int count = 0;
+            var stolid = new List<string>();
             foreach (var usr in _db.Users)
             {
-                listofid.Add(usr.Id);
-                count += 1;
+                stolid.Add(usr.Id);
             }
             ;
 
-            return listofid;
+            return stolid;
 
         }
 
@@ -126,13 +124,22 @@ namespace P2PSystem.Controllers
                 Task<string> result = content.ReadAsStringAsync();
                 res = result.Result;
 
+                var gender = JObject.Parse(res)["results"][0]["gender"];
                 var email = JObject.Parse(res)["results"][0]["email"];
                 var phone = JObject.Parse(res)["results"][0]["phone"];
                 var first = JObject.Parse(res)["results"][0]["name"]["first"];
                 var last = JObject.Parse(res)["results"][0]["name"]["last"];
+                var pictureUrl = JObject.Parse(res)["results"][0]["picture"]["large"];
+                var title = JObject.Parse(res)["results"][0]["name"]["title"];
+                var street = JObject.Parse(res)["results"][0]["location"]["street"];
+                var city = JObject.Parse(res)["results"][0]["location"]["city"];
+                var state = JObject.Parse(res)["results"][0]["location"]["state"];
+                var postcode = JObject.Parse(res)["results"][0]["location"]["postcode"];
+                var nat = JObject.Parse(res)["results"][0]["nat"];
 
-                P2PUser user = new P2PUser {UserName = email.ToString(),
 
+                P2PUser user = new P2PUser {
+                    UserName = email.ToString(),
                     Email = email.ToString(),
                     PersoNunmber = (2017 - rnd.Next(15,80)).ToString() + rnd.Next(10, 12).ToString() + rnd.Next(10, 30) + "-" +
                                    rnd.Next(1000, 9999),
@@ -140,15 +147,79 @@ namespace P2PSystem.Controllers
                     LastName = last.ToString(),
                     Type = (UserType) (DateTime.Now.Second % 2),
                     PhoneNumber = phone.ToString(),
+                    pictureUrl = pictureUrl.ToString(),
+                    UCScore = rnd.Next(0, 30),
+                    HasInfo = false,
                 };
-               
-                var password = "?9Rec+o9Z7tF";
-                //var ls = LISTOFID();
+                var password = "Lendify69*";
                 var resultti = await UserManager.CreateAsync(user, password);
+
+                foreach (var uzer in _db.Users.Where(x => x.HasInfo == false).ToList())
+                {
+
+                    foreach (var type in _db.UserInfoTypes.ToList())
+                    {
+                        string data = "";
+                        if (type.Id == 2)
+                        {
+                            data = gender.ToString();
+                        }
+                        else if (type.Id == 3)
+                        {
+                            data = rnd.Next(0, 1) == 0 ? "gift" : "ogift";
+                        }
+                        else if (type.Id == 4)
+                        {
+                            data = rnd.Next(0, 3).ToString();
+                        }
+                        else if (type.Id == 5)
+                        {
+                            data = rnd.Next(0, 5).ToString();
+                        }
+                        else if (type.Id == 6)
+                        {
+                            data = title.ToString();
+                        }
+                        else if (type.Id == 7)
+                        {
+                            data = street.ToString();
+                        }
+                        else if (type.Id == 8)
+                        {
+                            data = city.ToString();
+                        }
+                        else if (type.Id == 9)
+                        {
+                            data = state.ToString();
+                        }
+                        else if (type.Id == 10)
+                        {
+                            data = postcode.ToString();
+                        }
+                        else if (type.Id == 11)
+                        {
+                            data = nat.ToString();
+                        }
+
+                        UserInfoData UID = new UserInfoData()
+                        {
+                            P2PUser = uzer,
+                            UserInfoType = type,
+                            Data = data,
+
+                        };
+                        _db.UserInfoData.Add(UID);
+                        
+                    }
+                    uzer.HasInfo = true;
+                    _db.SaveChanges();
+                }
+
 
                 response.Dispose();
                 
                 }
+
             
             return View("Index");
         }
@@ -156,7 +227,9 @@ namespace P2PSystem.Controllers
         [HttpPost]
         public ActionResult CreateLoans()
         {
-            var Loaners = _db.Users.Where(x => x.Type == UserType.Ioaner);
+            var Loaners = _db.Users.Where(x => x.Type == UserType.Ioaner).ToList();
+            var rates = _db.Rates.Where(x => x.Type == LoanRateType.APR).ToList();
+
             foreach (var loaner in Loaners)
             {
                 _db.LoanApplications.Add(new LoanApplication
@@ -164,11 +237,18 @@ namespace P2PSystem.Controllers
                     Months = rnd.Next(12, 24),
                     User = loaner,
                     Amount = rnd.Next(10000, 80000),
-                    
+                    UCScore = loaner.UCScore,
+                    APR = rates.Single(x => x.P2PScoreMin <= loaner.UCScore && x.P2PScoreMax >= loaner.UCScore).Value,
+                    isSigned = rnd.Next(100) <= 50 ? true : false,
+                    isVerified = rnd.Next(100) <= 50 ? true : false,
+                    Flag = (CreditFlag)rnd.Next(0 ,6),
+                    Status = (LoanApplicationStatus)rnd.Next(0,3),
+                    BaseCurrency = rates.Single(x => x.P2PScoreMin <= loaner.UCScore && x.P2PScoreMax >= loaner.UCScore).BaseCurrency,
 
-                });
+                }
+                
+                );
             }
-
             _db.SaveChanges();
 
             return View("Index");
@@ -186,8 +266,7 @@ namespace P2PSystem.Controllers
                     Amount = rnd.Next(10000, 1000000),
                     User = investor,
                     Months = rnd.Next(12, 64),
-                  
-
+                 
                 });
             }
             

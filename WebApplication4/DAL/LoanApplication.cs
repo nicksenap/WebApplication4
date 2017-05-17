@@ -22,15 +22,15 @@ namespace WebApplication4.DAL
         public bool isVerified { set; get; }
         public LoanApplicationStatus Status { set; get; }
 
-        public  P2PUser User { set; get; }
-        public double UCScore { set; get; }
+        public Currency BaseCurrency { set; get; }
+        public P2PUser User { set; get; }
+        public int UCScore { set; get; }
         public string UCData { get; set; }
         public int UCViews { set; get; }
         public int UCQueries { set; get; }
 
-        public int P2PScore { set; get; } 
 
-        public double APR { set; get; }
+        public Double APR { set; get; }
         public string DataScore { set; get;}
         public CreditFlag Flag { set; get; }
         public string AMLData { get; set; }

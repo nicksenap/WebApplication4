@@ -343,6 +343,74 @@
     <Compile Include="Migrations\201705151631062_monyyyyY.Designer.cs">
       <DependentUpon>201705151631062_monyyyyY.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705161128308_monyyyyYy.cs" />
+    <Compile Include="Migrations\201705161128308_monyyyyYy.Designer.cs">
+      <DependentUpon>201705161128308_monyyyyYy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705161503463_monyyyyYyy.cs" />
+    <Compile Include="Migrations\201705161503463_monyyyyYyy.Designer.cs">
+      <DependentUpon>201705161503463_monyyyyYyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705161505215_add_currency_to_rates.cs" />
+    <Compile Include="Migrations\201705161505215_add_currency_to_rates.Designer.cs">
+      <DependentUpon>201705161505215_add_currency_to_rates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170749516_add_ucscore_to_user.cs" />
+    <Compile Include="Migrations\201705170749516_add_ucscore_to_user.Designer.cs">
+      <DependentUpon>201705170749516_add_ucscore_to_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170811378_wired.cs" />
+    <Compile Include="Migrations\201705170811378_wired.Designer.cs">
+      <DependentUpon>201705170811378_wired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170816586_wire.cs" />
+    <Compile Include="Migrations\201705170816586_wire.Designer.cs">
+      <DependentUpon>201705170816586_wire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170818511_wire1.cs" />
+    <Compile Include="Migrations\201705170818511_wire1.Designer.cs">
+      <DependentUpon>201705170818511_wire1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170821542_wirey.cs" />
+    <Compile Include="Migrations\201705170821542_wirey.Designer.cs">
+      <DependentUpon>201705170821542_wirey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170830394_wireyy.cs" />
+    <Compile Include="Migrations\201705170830394_wireyy.Designer.cs">
+      <DependentUpon>201705170830394_wireyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170832171_wireyyy.cs" />
+    <Compile Include="Migrations\201705170832171_wireyyy.Designer.cs">
+      <DependentUpon>201705170832171_wireyyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170835198_wireyyyy.cs" />
+    <Compile Include="Migrations\201705170835198_wireyyyy.Designer.cs">
+      <DependentUpon>201705170835198_wireyyyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170843573_wireyyyyy.cs" />
+    <Compile Include="Migrations\201705170843573_wireyyyyy.Designer.cs">
+      <DependentUpon>201705170843573_wireyyyyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170858454_wireyyyyyy.cs" />
+    <Compile Include="Migrations\201705170858454_wireyyyyyy.Designer.cs">
+      <DependentUpon>201705170858454_wireyyyyyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705170956400_adding_userinfodata.cs" />
+    <Compile Include="Migrations\201705170956400_adding_userinfodata.Designer.cs">
+      <DependentUpon>201705170956400_adding_userinfodata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171000449_adding_more.cs" />
+    <Compile Include="Migrations\201705171000449_adding_more.Designer.cs">
+      <DependentUpon>201705171000449_adding_more.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171005062_redo_dat_shit.cs" />
+    <Compile Include="Migrations\201705171005062_redo_dat_shit.Designer.cs">
+      <DependentUpon>201705171005062_redo_dat_shit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171304217_add_infocheck.cs" />
+    <Compile Include="Migrations\201705171304217_add_infocheck.Designer.cs">
+      <DependentUpon>201705171304217_add_infocheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="DAL\IdentityModels.cs" />
@@ -526,6 +594,57 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705151631062_monyyyyY.resx">
       <DependentUpon>201705151631062_monyyyyY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705161128308_monyyyyYy.resx">
+      <DependentUpon>201705161128308_monyyyyYy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705161503463_monyyyyYyy.resx">
+      <DependentUpon>201705161503463_monyyyyYyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705161505215_add_currency_to_rates.resx">
+      <DependentUpon>201705161505215_add_currency_to_rates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170749516_add_ucscore_to_user.resx">
+      <DependentUpon>201705170749516_add_ucscore_to_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170811378_wired.resx">
+      <DependentUpon>201705170811378_wired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170816586_wire.resx">
+      <DependentUpon>201705170816586_wire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170818511_wire1.resx">
+      <DependentUpon>201705170818511_wire1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170821542_wirey.resx">
+      <DependentUpon>201705170821542_wirey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170830394_wireyy.resx">
+      <DependentUpon>201705170830394_wireyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170832171_wireyyy.resx">
+      <DependentUpon>201705170832171_wireyyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170835198_wireyyyy.resx">
+      <DependentUpon>201705170835198_wireyyyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170843573_wireyyyyy.resx">
+      <DependentUpon>201705170843573_wireyyyyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170858454_wireyyyyyy.resx">
+      <DependentUpon>201705170858454_wireyyyyyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170956400_adding_userinfodata.resx">
+      <DependentUpon>201705170956400_adding_userinfodata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171000449_adding_more.resx">
+      <DependentUpon>201705171000449_adding_more.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171005062_redo_dat_shit.resx">
+      <DependentUpon>201705171005062_redo_dat_shit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171304217_add_infocheck.resx">
+      <DependentUpon>201705171304217_add_infocheck.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -44,12 +44,12 @@ namespace WebApplication4.DAL
     public enum CreditFlag
     {
         Black = 0,
-        White,
-        Red,
-        Orange,
-        Yellow,
-        Green,
-        Brown
+        White = 1,
+        Red = 2,
+        Orange = 3,
+        Yellow = 4,
+        Green = 5,
+        Brown = 6 
     }
 
     public enum LoanAccountStatus
@@ -86,13 +86,18 @@ namespace WebApplication4.DAL
 
     public enum LoanRateType
     {
-
+        APR = 0, // Loaner
+        EIR = 1,
+        Returns = 2,
+        Product = 4 // Investor
     }
 
 
     public enum LoanRateStatus
     {
-
+        Deprecated = 0,
+        Active = 1,
+        Inactive = 2
     }
 
     public enum LoanPaymentStatus
@@ -192,4 +197,19 @@ namespace WebApplication4.DAL
     {
 
     }
+
+    public enum Gender
+    {
+        Male = 0,
+        Female = 1
+    }
+
+    public enum CivilStatus
+    {
+        Married,
+        Single,
+        Divorced,
+        Widowed
+    }
+
 }

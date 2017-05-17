@@ -17,12 +17,24 @@ namespace WebApplication4.DAL
             public DateTime CreationDate { get; set; }
             public UserInfoDataStatus Status { get; set; }
             public string Data { get; set; }
-            public virtual P2PUser P2PUser { get; set; }
+
+            //public Gender gender { set; get; }
+            //public CivilStatus CivilStatus { set; get; }
+
+            //public int Cars { set; get; }
+            //public int e { set; get; }
+            //public string Title { set; get; }
+            
+
+
+        public virtual P2PUser P2PUser { get; set; }
             public virtual UserInfoType UserInfoType { get; set; }
 
             public UserInfoData()
             {
-                this.CreationDate = DateTime.Today;
+                // this.CreationDate = DateTime.Today;
             }
         }
-    }
+
+   
+}

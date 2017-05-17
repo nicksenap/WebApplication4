@@ -30,6 +30,9 @@ namespace WebApplication4.DAL
         public string LastName { set; get; }
         public UserStatus Status { set; get; }
         public UserType Type { set; get; }
+        public string pictureUrl { set; get; }
+        public int UCScore { set; get; }
+        public bool HasInfo { set; get; }
 
 
         public virtual ICollection<UserChangeLog> UserChangeLogs { set; get; }
