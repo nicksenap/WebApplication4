@@ -411,6 +411,14 @@
     <Compile Include="Migrations\201705171304217_add_infocheck.Designer.cs">
       <DependentUpon>201705171304217_add_infocheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705180818398_fyx.cs" />
+    <Compile Include="Migrations\201705180818398_fyx.Designer.cs">
+      <DependentUpon>201705180818398_fyx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705180820478_fyxx.cs" />
+    <Compile Include="Migrations\201705180820478_fyxx.Designer.cs">
+      <DependentUpon>201705180820478_fyxx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="DAL\IdentityModels.cs" />
@@ -645,6 +653,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705171304217_add_infocheck.resx">
       <DependentUpon>201705171304217_add_infocheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705180818398_fyx.resx">
+      <DependentUpon>201705180818398_fyx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705180820478_fyxx.resx">
+      <DependentUpon>201705180820478_fyxx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

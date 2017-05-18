@@ -9,20 +9,19 @@ namespace WebApplication4.DAL
 {
     public class UserInfoType
     {
-        
 
         [Key]
         public int Id { get; set; }
-
-        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime CreationDate { get; set; }
         public UserInfoTypeStatus Status { get; set; }
+        public UserInfoTypeType Type { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<UserInfoData> Data { get; set; }
+        public string Properties { get; set; }
+
 
         public UserInfoType()
         {
-            Data = new List<UserInfoData>();
+            
         }
     }
 }

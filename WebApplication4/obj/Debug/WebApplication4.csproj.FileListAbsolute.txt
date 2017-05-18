@@ -154,3 +154,5 @@ C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebAppli
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.adding_more.resources
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.redo_dat_shit.resources
 C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.add_infocheck.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.fyx.resources
+C:\Users\NickSong\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.fyxx.resources

@@ -18,14 +18,74 @@
             @Html.TextBoxFor(m => m.Months, new { @class = "form-control" })
         </div>
        
-        <br /><br />    
+       <br /><br />    
+        
+    <div class="form-group">
+        <div class="col-md-2 control-label">
+            @Html.LabelFor(m => m.JobType)
+        </div> 
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.JobType, // Model field that will be used to store user selection
+                "- Please select your JobType -", // Text for the first 'default' option
+                new { @class = "form-control" })  @* A class name to assign to "select" tag *@
+        </div>
+                
+    </div>
+    
+        <br /><br />  
+    <div class="form-group">
+        <div class="col-md-2 control-label">
+            @Html.LabelFor(m => m.MaritalStatus)
+        </div>
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.MaritalStatus, // Model field that will be used to store user selection
+                "- Please select your MaritalStatus -", // Text for the first 'default' option
+                new { @class = "form-control" }) @* A class name to assign to "select" tag *@
+        </div>
+    </div>
+        <br /><br />  
+    <div class="form-group">
+        <div class="col-md-2 control-label">
+            @Html.LabelFor(m => m.LivingStatus)
+        </div>
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.LivingStatus, // Model field that will be used to store user selection
+                "- Please select your LivingStatus -", // Text for the first 'default' option
+                new { @class = "form-control" })  @* A class name to assign to "select" tag *@
+        </div>
+    </div>
+    <br /><br />  
+        <div class="form-group">
+            <div class="col-md-2 control-label">
+                @Html.LabelFor(m => m.JobStatus)
+            </div>
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.JobStatus, // Model field that will be used to store user selection
+                    "- Please select your JobStatus -", // Text for the first 'default' option
+                    new { @class = "form-control" }) @* A class name to assign to "select" tag *@
+
+            </div></div>
+        <br /><br />  
+        <div class="form-group">
+            <div class="col-md-2 control-label">    
+                @Html.LabelFor(m => m.LoanCategory)
+            </div>
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.LoanCategory, // Model field that will be used to store user selection
+                "- Please select your LoanCategory -", // Text for the first 'default' option
+                new { @class = "form-control" })  @* A class name to assign to "select" tag *@
+        
+        </div></div>
+        
+        <br /><br />  
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" class="btn btn-success" value="Submit" />
             </div>
         </div>
-        
-    </div>
+        </div>
+    
 
 </form>
 

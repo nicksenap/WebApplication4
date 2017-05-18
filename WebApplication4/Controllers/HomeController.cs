@@ -209,7 +209,7 @@ namespace P2PSystem.Controllers
 
                         };
                         _db.UserInfoData.Add(UID);
-                        
+
                     }
                     uzer.HasInfo = true;
                     _db.SaveChanges();
