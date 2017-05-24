@@ -202,7 +202,9 @@ namespace WebApplication4.DAL
         Date = 3,
         Bool = 4,
         Enum = 5,
-        RegEx = 6
+        RegEx = 6,
+        MultiChoices = 7,
+        
     }
 
     public enum InvestmentPaymentStatus
@@ -288,21 +290,21 @@ namespace WebApplication4.DAL
         [Display(Name = "änka/änkling")]
         anka_ankling = 5,
     }
-    public enum LivingStatus
-    {
-        [Display(Name = "Småhus")]
-        Smahus = 0,
-        [Display(Name = "Bostadsrätt")]
-        Bostadsratt = 1,
-        [Display(Name = "Hyresrätt")]
-        Hyresratt = 2,
-        [Display(Name = "Andrahand")]
-        Andrahand = 3,
-        [Display(Name = "Inneboende")]
-        Inneboende = 4,
-        [Display(Name = "Fritidshus")]
-        Fritidshus = 5,
-    }
+    //public enum LivingStatus
+    //{
+    //    [Display(Name = "Småhus")]
+    //    Smahus = 0,
+    //    [Display(Name = "Bostadsrätt")]
+    //    Bostadsratt = 1,
+    //    [Display(Name = "Hyresrätt")]
+    //    Hyresratt = 2,
+    //    [Display(Name = "Andrahand")]
+    //    Andrahand = 3,
+    //    [Display(Name = "Inneboende")]
+    //    Inneboende = 4,
+    //    [Display(Name = "Fritidshus")]
+    //    Fritidshus = 5,
+    //}
     public enum JobStatus
     {
         [Display(Name = "Fast anställd")]

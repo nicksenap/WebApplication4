@@ -1,96 +1,81 @@
 ﻿
 @using System.Data.Entity
+@using Newtonsoft.Json.Linq
+@using WebApplication4.Controllers
 @model  WebApplication4.Models.LoanViewModel 
     
-
-
 <h2>Apply for a new Loan</h2>
 <hr />
-<form method="post">
-    <div class="form-group">
-        @Html.LabelFor(m => m.Amount, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Amount, new { @class = "form-control" })
-        </div>
-        <br/> <br />
-        @Html.LabelFor(m => m.Months, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Months, new { @class = "form-control" })
-        </div>
-       
-       <br /><br />    
-        
-    <div class="form-group">
-        <div class="col-md-2 control-label">
-            @Html.LabelFor(m => m.JobType)
-        </div> 
-        <div class="col-md-10">
-            @Html.EnumDropDownListFor(model => model.JobType, // Model field that will be used to store user selection
-                "- Please select your JobType -", // Text for the first 'default' option
-                new { @class = "form-control" })  @* A class name to assign to "select" tag *@
-        </div>
-                
-    </div>
+@{
     
-        <br /><br />  
-    <div class="form-group">
-        <div class="col-md-2 control-label">
-            @Html.LabelFor(m => m.MaritalStatus)
-        </div>
-        <div class="col-md-10">
-            @Html.EnumDropDownListFor(model => model.MaritalStatus, // Model field that will be used to store user selection
-                "- Please select your MaritalStatus -", // Text for the first 'default' option
-                new { @class = "form-control" }) @* A class name to assign to "select" tag *@
-        </div>
+}
+
+<form method="post">
+    <div class="form-group"/>
+    @Html.LabelFor(m => m.Amount, new {@class = "col-md-2 control-label"})
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.Amount, new {@class = "form-control"})
     </div>
-        <br /><br />  
-    <div class="form-group">
-        <div class="col-md-2 control-label">
-            @Html.LabelFor(m => m.LivingStatus)
-        </div>
-        <div class="col-md-10">
-            @Html.EnumDropDownListFor(model => model.LivingStatus, // Model field that will be used to store user selection
-                "- Please select your LivingStatus -", // Text for the first 'default' option
-                new { @class = "form-control" })  @* A class name to assign to "select" tag *@
-        </div>
+    <br/>
+    <br/>
+    @Html.LabelFor(m => m.Months, new {@class = "col-md-2 control-label"})
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.Months, new {@class = "form-control"})
     </div>
-    <br /><br />  
-        <div class="form-group">
-            <div class="col-md-2 control-label">
-                @Html.LabelFor(m => m.JobStatus)
+    <br/>
+    <br/>
+
+    @using (Html.BeginForm("Apply", "Loan", FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+    {
+        @*@Html.AntiForgeryToken()
+
+        @Html.ValidationSummary("", new {@class = "text-danger"})*@
+
+
+        <div class="row">
+            
+           
+            <div class="col-md-10">
+                <h1>@Html.LabelFor(m => m.LivingStatus, new {@class = "col-md-2 control-label"})</h1>
             </div>
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.JobStatus, // Model field that will be used to store user selection
-                    "- Please select your JobStatus -", // Text for the first 'default' option
-                    new { @class = "form-control" }) @* A class name to assign to "select" tag *@
-
-            </div></div>
-        <br /><br />  
-        <div class="form-group">
-            <div class="col-md-2 control-label">    
-                @Html.LabelFor(m => m.LoanCategory)
+                @Html.DropDownListFor(m => m.LivingStatus, Model.LivingStatusItems)
+                </div>
+                
+                <div class="col-md-10">
+                    <h1>@Html.LabelFor(m => m.CivilStatus, new {@class = "col-md-2 control-label"})</h1>
+                </div>
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.CivilStatus, Model.CivilStatusItems)
             </div>
-        <div class="col-md-10">
-            @Html.EnumDropDownListFor(model => model.LoanCategory, // Model field that will be used to store user selection
-                "- Please select your LoanCategory -", // Text for the first 'default' option
-                new { @class = "form-control" })  @* A class name to assign to "select" tag *@
-        
-        </div></div>
-        
-        <br /><br />  
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-success" value="Submit" />
+            <div class="col-md-10">
+                <h1>@Html.LabelFor(m => m.JobStatus, new {@class = "col-md-2 control-label"})</h1>
             </div>
-        </div>
-        </div>
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.JobStatus, Model.JobStatusItems)
+            </div>
+            <div class="col-md-10">
+                <h1>@Html.LabelFor(m => m.LoanCategory, new {@class = "col-md-2 control-label"})</h1>
+            </div>
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.LoanCategory, Model.LoanCategoryItems)
+            </div>
+            <div class="col-md-10">
+                <h1>@Html.LabelFor(m => m.JobType, new {@class = "col-md-2 control-label"})</h1>
+            </div>
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.JobType, Model.JobTypeItems)
+            </div>
+            </div>
+        
     
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-success" value="Submit" />
+        </div>
+    </div>
 
+        
+
+    }
 </form>
-
-
-
-
-
-
