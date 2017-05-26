@@ -6,9 +6,15 @@ using WebApplication4.DAL;
 
 namespace WebApplication4.Models
 {
+    public class DropdownElement
+    {
+        public int DropdownValue { set; get; }
+        public List<SelectListItem> DropDownItems { set; get; }
+    }
 
     public class LoanViewModel
     {
+
         [Required]
         [Display(Name = "Amount")]
         public double Amount { get; set; }

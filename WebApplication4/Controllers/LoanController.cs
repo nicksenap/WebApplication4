@@ -66,30 +66,30 @@ namespace WebApplication4.Controllers
             var jobStatusdatalist =
                 JsonConvert.DeserializeObject<LoanViewModel.EnumDynamicType>(jobStatusType.Properties);
 
-            var LoanCategoryType = _db.UserInfoTypes.Single(z => z.Name == "LoanCategory");
+            var loanCategoryType = _db.UserInfoTypes.Single(z => z.Name == "LoanCategory");
 
-            var LoanCategorydatalist =
-                JsonConvert.DeserializeObject<LoanViewModel.EnumDynamicType>(LoanCategoryType.Properties);
+            var loanCategorydatalist =
+                JsonConvert.DeserializeObject<LoanViewModel.EnumDynamicType>(loanCategoryType.Properties);
 
-            var CivilStatusType = _db.UserInfoTypes.Single(z => z.Name == "CivilStatus");
+            var civilStatusType = _db.UserInfoTypes.Single(z => z.Name == "CivilStatus");
 
-            var CivilStatusdatalist =
-                JsonConvert.DeserializeObject<LoanViewModel.EnumDynamicType>(CivilStatusType.Properties);
+            var civilStatusdatalist =
+                JsonConvert.DeserializeObject<LoanViewModel.EnumDynamicType>(civilStatusType.Properties);
 
-            var JobTypeType = _db.UserInfoTypes.Single(z => z.Name == "JobType");
+            var jobTypeType = _db.UserInfoTypes.Single(z => z.Name == "JobType");
 
-            var JobTypedatalist =
-                JsonConvert.DeserializeObject<LoanViewModel.EnumDynamicType>(JobTypeType.Properties);
+            var jobTypedatalist =
+                JsonConvert.DeserializeObject<LoanViewModel.EnumDynamicType>(jobTypeType.Properties);
 
 
 
             var loanAppModel = new LoanViewModel();
 
             loanAppModel.LivingStatusItems = livingStatusdatalist.English;
-            loanAppModel.CivilStatusItems = CivilStatusdatalist.English;
+            loanAppModel.CivilStatusItems = civilStatusdatalist.English;
             loanAppModel.JobStatusItems = jobStatusdatalist.English;
-            loanAppModel.LoanCategoryItems = LoanCategorydatalist.English;
-            loanAppModel.JobTypeItems = JobTypedatalist.English;
+            loanAppModel.LoanCategoryItems = loanCategorydatalist.English;
+            loanAppModel.JobTypeItems = jobTypedatalist.English;
 
 
 
